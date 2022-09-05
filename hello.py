@@ -107,3 +107,11 @@ while i >=0:
     print(i)
 else:
     print('Condition is False.')
+
+
+# try except 예외 처리
+print('***************try except 예외 처리*****************')
+try:
+    1/0
+except Exception as e:
+    print('Exception occured: ', str(e))
