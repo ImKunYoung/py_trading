@@ -141,3 +141,7 @@ print('***************split() 함수*****************')
 myList = 'Thoughts become things.'.split()
 print(type(myList))
 print(myList)
+
+print('***************join() 함수*****************')
+# join() 함수
+print(' '.join(myList))
