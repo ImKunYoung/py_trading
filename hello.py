@@ -66,3 +66,16 @@ print(5%3) # 나머지
 x=2
 x +=2
 print(x)
+
+# 2.3.3 흐름 제어
+print('***************흐름 제어*****************')
+# if 조건문
+print('***************if 조건문*****************')
+rsi = 20
+if rsi > 70:
+    print('RSI', rsi, 'means overbought.')
+elif rsi < 30:
+    print('rsi', rsi, 'means oversold.')
+else:
+    print('...')
+
