@@ -115,3 +115,23 @@ try:
     1/0
 except Exception as e:
     print('Exception occured: ', str(e))
+
+# 2.4 반복 자료형
+
+# 2.4.1 리스트
+print('***************try except 예외 처리*****************')
+ls = ['one', 'two', 'three', 4, 5, 6]
+print(ls)
+ls2 = list(['one', 'two', 'three', 4, 5, 6])
+print(ls2)
+
+print(ls[0], ls[-1])
+
+L=[[1,2], [3,4]]
+print(L[0], L[1])
+
+print(L[0][1])
+print(L[1][1])
+
+print(L+L)
+print(L*3)
