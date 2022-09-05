@@ -148,10 +148,21 @@ print(' '.join(myList))
 
 
 # append() 와 extend()
-print('***************append() 함수*****************')
+print('***************append() 함수*****************') # 넘겨 받은 인수의 자료형에 상관 없이 리스트 뒤에 그대로 추가
 L = [1,2]
 L.append([3,4])
 print(L)
 L.append(5)
 print(L)
 
+print('***************extend() 함수*****************') # 넘겨받은 인수가 반복 자료형일 경우, 반복 자료형 내부의 각 원소를 추가
+L = [3,2]
+print(L)
+L.extend([3,4])
+print(L)
+L.extend([5])
+print(L)
+L.extend(6)
+print(L)
+L.extend([7])
+print(L)
