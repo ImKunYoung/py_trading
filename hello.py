@@ -135,3 +135,9 @@ print(L[1][1])
 
 print(L+L)
 print(L*3)
+
+# split() 함수
+print('***************split() 함수*****************')
+myList = 'Thoughts become things.'.split()
+print(type(myList))
+print(myList)
