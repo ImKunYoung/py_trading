@@ -89,3 +89,21 @@ for i in range(1, 8, 2):
 FAANG = ['FB','AMZN','AAPL','NFLX','GOOGL']
 for idx, symbol in enumerate(FAANG, 1):
     print(idx, symbol)
+
+# while 반복문
+print('***************while 반복문*****************')
+i = 1
+while i < 7:
+    print(i)
+    i += 2
+print('***************while 반복문*****************')
+i = 0
+while i >=0:
+    i +=1
+    if(i%2)==0:
+        continue
+    if i> 5:
+        break
+    print(i)
+else:
+    print('Condition is False.')
