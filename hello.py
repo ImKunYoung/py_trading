@@ -210,3 +210,22 @@ newList = myList[:]
 newList[-1] = 'actions.'
 print(newList)
 print(myList)
+
+# 리스트 내포
+print('***************리스트 내포*****************')
+nums = [1,2,3,4,5]
+squares = []
+for x in nums:
+    squares.append(x ** 2)
+
+print(squares)
+
+print('***************리스트 내포*****************')
+nums = [1,2,3,4,5]
+squares = [x**2 for x in nums]
+print(squares)
+
+print('***************리스트 내포*****************')
+nums = [1, 2, 3, 4, 5]
+even_squares = [x ** 2 for x in nums if x % 2 == 0]
+print(even_squares)
