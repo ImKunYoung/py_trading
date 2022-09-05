@@ -184,3 +184,29 @@ print(''.join('1,234,567,890'.split(',')))
 print('1,234,567,890'.replace(',',''))
 
 print(format(1234567890, ','))
+
+# 리스트 복사
+print('***************리스트 복사*****************')
+myList = ['Thoughts', 'become', 'things.']
+newList = myList
+print(newList)
+newList = myList[:]
+print(newList)
+newList = myList[:2]
+print(newList)
+newList = myList[2:]
+print(newList)
+
+print('***************swallow copy*****************')
+myList = ['Thoughts', 'become', 'things.']
+newList = myList
+newList[-1] = 'actions.'
+print(newList)
+print(myList)
+
+print('***************deep copy*****************')
+myList = ['Thoughts', 'become', 'things.']
+newList = myList[:]
+newList[-1] = 'actions.'
+print(newList)
+print(myList)
