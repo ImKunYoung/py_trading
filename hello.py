@@ -142,6 +142,16 @@ myList = 'Thoughts become things.'.split()
 print(type(myList))
 print(myList)
 
-print('***************join() 함수*****************')
 # join() 함수
+print('***************join() 함수*****************')
 print(' '.join(myList))
+
+
+# append() 와 extend()
+print('***************append() 함수*****************')
+L = [1,2]
+L.append([3,4])
+print(L)
+L.append(5)
+print(L)
+
