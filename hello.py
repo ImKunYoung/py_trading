@@ -162,7 +162,17 @@ L.extend([3,4])
 print(L)
 L.extend([5])
 print(L)
-L.extend(6)
-print(L)
+
+try:
+    L.extend(6)
+    print(L)
+except Exception as e:
+    print('Exception Occured: ', str(e))
+
 L.extend([7])
 print(L)
+
+# 구분자 변경하기
+print('***************구분자 변경하기*****************')
+print('-'.join('2012/01/04'.split('/')))
+print('2012/01/04'.replace('/','-'))
