@@ -79,3 +79,13 @@ elif rsi < 30:
 else:
     print('...')
 
+# for 반복문
+for i in [1, 3, 5]:
+    print(i)
+
+for i in range(1, 8, 2):
+    print(i)
+
+FAANG = ['FB','AMZN','AAPL','NFLX','GOOGL']
+for idx, symbol in enumerate(FAANG, 1):
+    print(idx, symbol)
