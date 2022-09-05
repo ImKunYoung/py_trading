@@ -51,3 +51,18 @@ print(word[-6]+word[-5]+word[-4]+word[-3]+word[-2]+word[-1])
 print('***************슬라이싱*****************')
 print(word[:3])
 print(word[3:])
+
+# 2.3.2 산술 연산
+print('***************산술 연산*****************')
+print(1+2)
+print(3-5)
+print(5*8)
+print(2**8)
+print(pow(2,8))
+print(5/3)
+print(5//3) # 몫
+print(5%3) # 나머지
+
+x=2
+x +=2
+print(x)
