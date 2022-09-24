@@ -266,22 +266,43 @@ print('***************2.4.4 문자열 포맷 출력 - f-strings 방식**********
 for x in crispr:
     print(f'{x}:{crispr[x]}')
 
+# 2.4.5 중복 없는 셋 (set)
+# set - 중복이 없는 원소 집합
+print('***************2.4.5 중복 없는 셋 (set)*****************')
+s = {'A','P','P','L','E'}
+print(s)
 
+print('***************2.4.5 중복 없는 셋 (set) - 생성한 순서대로 원소가 저장되지는 않음*****************')
+mySet = {'B', 6, 1, 2}
+print(mySet) # 개판이네..
 
+print('***************2.4.5 중복 없는 셋 (set) - 셋 내부에 특정 원소가 존재하는지 검사*****************')
+if 'B' in mySet:
+    print("'B' exists in", mySet)
 
+print('***************2.4.5 중복 없는 셋 (set) - 셋은 인덱싱 불가한 대신 원소들의 교,합,차 집합을 구할 수 있다.*****************')
+setA = {1,2,3,4,5}
+setB = {3,4,5,6,7}
 
+print(setA.intersection(setB))
+print(setA & setB)
 
+print(setA.union(setB))
+print(setA | setB)
 
+print(setA.difference(setB))
+print(setA-setB)
 
+print(setB.difference(setA))
+print(setB-setA)
 
+print('***************2.4.5 중복 없는 셋 (set) - 빈 셋은 s=set() 으로 생성해야 한다*****************')
+s = set()
+print(s)
 
-
-
-
-
-
-
-
+print('***************2.4.5 중복 없는 셋 (set) - 셋을 활용하면 리스트에서 중복 원소를 간단히 제거할 수 있다*****************')
+ls = [1,3,5,2,2,3,4,2,1,1,1,5]
+print(list(set(ls)))
 
 
 
