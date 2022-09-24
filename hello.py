@@ -251,6 +251,41 @@ crispr['CRSP'] = 'CRISPR Therapeutics'
 print(crispr)
 print(len(crispr))
 
+# 2.4.4 문자열 포맷 출력
+print('***************2.4.4 문자열 포맷 출력*****************')
+
+print('***************2.4.4 문자열 포맷 출력 - % 기호 방식*****************')
+for x in crispr:
+    print('%s : %s' % (x, crispr[x]))
+
+print('***************2.4.4 문자열 포맷 출력 - {} 기호 방식*****************')
+for x in crispr:
+    print('{} : {}'.format(x, crispr[x]))
+
+print('***************2.4.4 문자열 포맷 출력 - f-strings 방식*****************')
+for x in crispr:
+    print(f'{x}:{crispr[x]}')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
