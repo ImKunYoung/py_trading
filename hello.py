@@ -241,13 +241,15 @@ print(myTuple[4](-100))
 print('***************6번째 원소인 내장함수 max()에 리스트를 파리미터로 전달*****************')
 print(myTuple[5](myTuple[3]))
 
+# 2.4.3 {키:값} 형태 딕셔너리
+print('***************{키:값} 형태 딕셔너리*****************')
+crispr = {'EDIT':"Editas Medicine", 'NTLA':'Intellia Threpeutics'}
+print(crispr['EDIT'])
 
-
-
-
-
-
-
+print('***************{키:값} 형태 딕셔너리 - 원소 추가*****************')
+crispr['CRSP'] = 'CRISPR Therapeutics'
+print(crispr)
+print(len(crispr))
 
 
 
