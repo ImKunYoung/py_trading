@@ -304,9 +304,29 @@ print('***************2.4.5 중복 없는 셋 (set) - 셋을 활용하면 리스
 ls = [1,3,5,2,2,3,4,2,1,1,1,5]
 print(list(set(ls)))
 
+# 2.4.6 타임잇으로 성능 측정하기
+print('***************2.4.6 타임잇으로 성능 측정하기*****************')
 
+print('***************2.4.6 타임잇으로 성능 측정하기 - 순회 속도 비교*****************')
+import timeit
 
+iteration_test = """
+for i in itr:
+    pass
+"""
 
+print(timeit.timeit(iteration_test, setup='itr = list(range(10000))', number=1000))
+print(timeit.timeit(iteration_test, setup='itr = tuple(range(10000))', number=1000))
+print(timeit.timeit(iteration_test, setup='itr = set(range(10000))', number=1000))
 
+print('***************2.4.6 타임잇으로 성능 측정하기 - 검색 속도 비교*****************')
+search_test = """
+import random
+x = random.randint(0, len(itr)-1)
+if x in itr :
+    pass
+"""
 
-
+print(timeit.timeit(search_test, setup='itr = list(range(10000))', number=1000))
+print(timeit.timeit(search_test, setup='itr = tuple(range(10000))', number=1000))
+print(timeit.timeit(search_test, setup='itr = set(range(10000))', number=1000))
