@@ -330,3 +330,62 @@ if x in itr :
 print(timeit.timeit(search_test, setup='itr = list(range(10000))', number=1000))
 print(timeit.timeit(search_test, setup='itr = tuple(range(10000))', number=1000))
 print(timeit.timeit(search_test, setup='itr = set(range(10000))', number=1000))
+
+# 2.5 변수와 함수
+print('***************2.5 변수와 함수*****************')
+# 2.5.1 변수
+print('***************2.5.1 변수*****************')
+
+print('***************2.5.1 변수 - 정수형*****************')
+i = 3
+print(i)
+print(type(i))
+
+print('***************2.5.1 변수 - 실수형*****************')
+f = 1.0
+print(f)
+print(type(f))
+
+print('***************2.5.1 변수 - 정수형과 실수형의 계산 결과는 실수형으로 처리*****************')
+var = i * f
+print('{}:{}'.format(var, type(var)))
+
+print('***************2.5.1 변수 - 제한 없는 정수형*****************')
+googol = 10 ** 100 # pow(10,100)
+print(type(googol))
+print(googol)
+
+print('***************2.5.1 변수 - dir() 함수*****************')
+s = 'string' # 문자열
+print(type(s))
+print(dir(s))
+
+
+print('***************2.5.1 변수 - 예약어*****************')
+# 변수명으로 사용할 수 없는 단어
+help('keyword')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
