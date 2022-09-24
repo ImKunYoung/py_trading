@@ -360,10 +360,66 @@ s = 'string' # 문자열
 print(type(s))
 print(dir(s))
 
-
 print('***************2.5.1 변수 - 예약어*****************')
 # 변수명으로 사용할 수 없는 단어
 help('keyword')
+
+# 2.5.2 함수
+print('***************2.5.2 함수*****************')
+
+print('***************2.5.2 함수 - 연평균 성장률 (CAGR) 구하기*****************')
+def getCAGR(first, last, years):
+    return (last/first)**(1/years)-1
+
+# 삼성 전자는 1998년 4월 27일 65300원이던 주가가 액면 분할 직전인 2018년 4월 27일 2669000원이 되기까지 20년간 4087% 로 상승함. 이 기간 연 평균 성장률은 20.38%
+cagr = getCAGR(65300,2669000,20)
+print("SEC CACR: {: .2%}".format(cagr))
+
+print('***************2.5.2 함수 - None 반환값*****************')
+def fun1():
+    pass
+
+def fun2():
+    return
+
+def fun3():
+    return None
+
+print(fun1()); print(fun2()); print(fun3());
+
+print(type(None))
+
+print(fun1()==None)
+print(fun1() is None)
+
+print('***************2.5.2 함수 - 여러 결괏값 반환*****************')
+def myFunc():
+    var1 = 'a'
+    var2 = [1,2,3]
+    var3 = max
+    return var1, var2, var3 # 여러 개의 결괏값은 기본적으로 튜플 타입으로 반환된다.
+
+print(myFunc())
+
+print('***************2.5.2 함수 - 여러 결괏값 반환 - 함수에서 반환한 순서대로 여러 객체로 나누어 받기*****************')
+s, l, f = myFunc()
+print(s)
+print(type(s))
+print(l)
+print(type(l))
+print(f)
+print(type(f))
+
+print('***************2.5.2 함수 - 람다*****************')
+# 람다는 이름 없는 함수를 만들 때 사용
+insertComma = lambda x : format(x, ',')
+print(insertComma(1234567889))
+
+print('***************2.5.2 함수 - 내장 함수 리스트*****************')
+abs = 1
+print(abs)
+print(abs(-100))
+
 
 
 
