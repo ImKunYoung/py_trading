@@ -42,10 +42,10 @@ print('***************인덱싱*****************')
 word = 'Python'
 print(len(word))
 print(word[0])
-print(word[0]+word[1]+word[2]+word[3]+word[4]+word[5])
+print(word[0] + word[1] + word[2] + word[3] + word[4] + word[5])
 
 print(word[-6])
-print(word[-6]+word[-5]+word[-4]+word[-3]+word[-2]+word[-1])
+print(word[-6] + word[-5] + word[-4] + word[-3] + word[-2] + word[-1])
 
 # 슬라이싱
 print('***************슬라이싱*****************')
@@ -54,17 +54,17 @@ print(word[3:])
 
 # 2.3.2 산술 연산
 print('***************산술 연산*****************')
-print(1+2)
-print(3-5)
-print(5*8)
-print(2**8)
-print(pow(2,8))
-print(5/3)
-print(5//3) # 몫
-print(5%3) # 나머지
+print(1 + 2)
+print(3 - 5)
+print(5 * 8)
+print(2 ** 8)
+print(pow(2, 8))
+print(5 / 3)
+print(5 // 3)  # 몫
+print(5 % 3)  # 나머지
 
-x=2
-x +=2
+x = 2
+x += 2
 print(x)
 
 # 2.3.3 흐름 제어
@@ -86,7 +86,7 @@ for i in [1, 3, 5]:
 for i in range(1, 8, 2):
     print(i)
 
-FAANG = ['FB','AMZN','AAPL','NFLX','GOOGL']
+FAANG = ['FB', 'AMZN', 'AAPL', 'NFLX', 'GOOGL']
 for idx, symbol in enumerate(FAANG, 1):
     print(idx, symbol)
 
@@ -98,21 +98,20 @@ while i < 7:
     i += 2
 print('***************while 반복문*****************')
 i = 0
-while i >=0:
-    i +=1
-    if(i%2)==0:
+while i >= 0:
+    i += 1
+    if (i % 2) == 0:
         continue
-    if i> 5:
+    if i > 5:
         break
     print(i)
 else:
     print('Condition is False.')
 
-
 # try except 예외 처리
 print('***************try except 예외 처리*****************')
 try:
-    1/0
+    1 / 0
 except Exception as e:
     print('Exception occured: ', str(e))
 
@@ -127,14 +126,14 @@ print(ls2)
 
 print(ls[0], ls[-1])
 
-L=[[1,2], [3,4]]
+L = [[1, 2], [3, 4]]
 print(L[0], L[1])
 
 print(L[0][1])
 print(L[1][1])
 
-print(L+L)
-print(L*3)
+print(L + L)
+print(L * 3)
 
 # split() 함수
 print('***************split() 함수*****************')
@@ -146,19 +145,18 @@ print(myList)
 print('***************join() 함수*****************')
 print(' '.join(myList))
 
-
 # append() 와 extend()
-print('***************append() 함수*****************') # 넘겨 받은 인수의 자료형에 상관 없이 리스트 뒤에 그대로 추가
-L = [1,2]
-L.append([3,4])
+print('***************append() 함수*****************')  # 넘겨 받은 인수의 자료형에 상관 없이 리스트 뒤에 그대로 추가
+L = [1, 2]
+L.append([3, 4])
 print(L)
 L.append(5)
 print(L)
 
-print('***************extend() 함수*****************') # 넘겨받은 인수가 반복 자료형일 경우, 반복 자료형 내부의 각 원소를 추가
-L = [3,2]
+print('***************extend() 함수*****************')  # 넘겨받은 인수가 반복 자료형일 경우, 반복 자료형 내부의 각 원소를 추가
+L = [3, 2]
 print(L)
-L.extend([3,4])
+L.extend([3, 4])
 print(L)
 L.extend([5])
 print(L)
@@ -175,13 +173,13 @@ print(L)
 # 구분자 변경하기
 print('***************구분자 변경하기*****************')
 print('-'.join('2012/01/04'.split('/')))
-print('2012/01/04'.replace('/','-'))
+print('2012/01/04'.replace('/', '-'))
 
 # 천 단위 숫자를 쉼표로 구분하기
 print('***************천 단위 숫자를 쉼표로 구분하기*****************')
 print('1,234,567,890'.split(','))
 print(''.join('1,234,567,890'.split(',')))
-print('1,234,567,890'.replace(',',''))
+print('1,234,567,890'.replace(',', ''))
 
 print(format(1234567890, ','))
 
@@ -213,7 +211,7 @@ print(myList)
 
 # 리스트 내포
 print('***************리스트 내포*****************')
-nums = [1,2,3,4,5]
+nums = [1, 2, 3, 4, 5]
 squares = []
 for x in nums:
     squares.append(x ** 2)
@@ -221,11 +219,36 @@ for x in nums:
 print(squares)
 
 print('***************리스트 내포*****************')
-nums = [1,2,3,4,5]
-squares = [x**2 for x in nums]
+nums = [1, 2, 3, 4, 5]
+squares = [x ** 2 for x in nums]
 print(squares)
 
 print('***************리스트 내포*****************')
 nums = [1, 2, 3, 4, 5]
 even_squares = [x ** 2 for x in nums if x % 2 == 0]
 print(even_squares)
+
+# 2.4.2 변경이 불가능한 튜플
+print('***************튜플은 다른 리스트나 내장함수도 원소로 가질 수 있음*****************')
+myTuple = ('a', 'b', 'c', [10, 20, 30], abs, max)
+
+print('***************인덱싱을 사용하여 4번째 원소인 리스트를 출력*****************')
+print(myTuple[3])
+
+print('***************5번째 원소인 내장함수 abs()에 -100을 파라미터로 전달*****************')
+print(myTuple[4](-100))
+
+print('***************6번째 원소인 내장함수 max()에 리스트를 파리미터로 전달*****************')
+print(myTuple[5](myTuple[3]))
+
+
+
+
+
+
+
+
+
+
+
+
